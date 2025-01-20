@@ -1,0 +1,84 @@
+# stories.yml
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tourism_info
+  - action: utter_tourism_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: tourism by category
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tourism_by_category
+    entities:
+      - category: Nature
+  - action: action_provide_tourism_by_category
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: tourism by country
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tourism_by_country
+    entities:
+      - country: India
+  - action: action_provide_tourism_by_country
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: tourism by rating
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tourism_by_rating
+  - action: action_provide_tourism_by_rating
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: top rated india
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: top_rated_places_in_india
+  - action: action_provide_top_rated_places_in_india
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: tourism by accommodation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tourism_by_accommodation
+  - action: action_check_accommodation
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: greet and affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_affirm
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: greet and deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_deny
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
