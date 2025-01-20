@@ -1,0 +1,69 @@
+# rules.yml
+version: "3.1"
+
+rules:
+- rule: Greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Handle thanks
+  steps:
+  - intent: thank
+  - action: utter_you_are_welcome
+
+- rule: Handle affirmation
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- rule: Handle denial
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- rule: Provide general tourism information
+  steps:
+  - intent: tourism_info
+  - action: utter_tourism_info
+
+- rule: Provide tourism by category
+  steps:
+  - intent: tourism_by_category
+  - action: action_provide_tourism_by_category
+
+- rule: Provide top rated destinations
+  steps:
+  - intent: tourism_by_category
+  - action: action_provide_tourism_by_rating
+  - action: utter_anything_else #This is optional, but good practice
+
+- rule: Provide top rated places in India
+  steps:
+  - intent: top_rated_places_in_india
+  - action: action_provide_top_rated_places_in_india
+
+- rule: Provide tourism information by country
+  steps:
+  - intent: tourism_by_country
+  - action: action_provide_tourism_by_country
+
+- rule: Provide tourism information by rating
+  steps:
+  - intent: tourism_by_rating
+  - action: action_provide_tourism_by_rating
+
+- rule: Check accommodation availability
+  steps:
+  - intent: tourism_by_accommodation
+  - action: action_check_accommodation
+
+- rule: Handle bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
