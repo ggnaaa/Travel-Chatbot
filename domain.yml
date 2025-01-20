@@ -1,0 +1,88 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thank
+  - tourism_info
+  - tourism_by_category
+  - tourism_by_country
+  - tourism_by_rating
+  - top_rated_places_in_india
+  - tourism_by_accommodation
+  - bot_challenge
+
+entities:
+  - country
+  - category
+  - visitors # Corrected entity name
+  - rating
+  - revenue
+  - accommodation_available # Corrected entity name
+
+slots:
+  category:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: category
+  country:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: country
+  visitors: # Added slots for other entities
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: visitors
+  rating:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: rating
+  revenue:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: revenue
+  accommodation_available:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: accommodation_available
+
+responses:
+  utter_greet:
+    - text: "Hey! How can I help you with tourism information today?"
+    - text: "Hello there! What kind of tourist destinations are you interested in?"
+  utter_goodbye:
+    - text: "Bye! Have a great time!"
+    - text: "Goodbye. Happy travels!"
+  utter_affirm:
+    - text: "Great!"
+  utter_deny:
+    - text: "Okay."
+  utter_you_are_welcome:
+    - text: "You're welcome!"
+  utter_anything_else:
+    - text: "Is there anything else I can help you with?"
+  utter_tourism_info:
+    - text: "I can provide information about various tourist destinations. You can ask me about places by category (like Nature, Historical), by country, by rating, or by accommodation availability."
+  utter_iamabot:
+    - text: "I am a bot designed to provide tourist information. How can I help?"
+
+actions:
+  - action_provide_tourism_by_category
+  - action_provide_tourism_by_country
+  - action_provide_tourism_by_rating
+  - action_provide_top_rated_places_in_india
+  - action_check_accommodation
