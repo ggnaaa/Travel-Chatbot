@@ -1,0 +1,703 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+    - hello there
+    - greetings
+    - what's up
+    - how's it going
+    - sup
+    - yo
+    - hii
+    - heyy
+    - helloo
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - see ya
+    - farewell
+    - good night
+    - bye bye
+    - later
+    - have a good one
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - I appreciate it
+    - cheers
+    - thanks a lot
+    - much appreciated
+
+- intent: affirm
+  examples: |
+    - yes
+    - okay
+    - sure
+    - alright
+    - great
+    - perfect
+    - absolutely
+    - indeed
+    - certainly
+    - that's right
+    - sounds good
+    - yeah
+    - yup
+    - of course
+    - definitely
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - no way
+    - not really
+    - nope
+    - not at all
+    - I don't want to
+    - I'd rather not
+
+- intent: tourism_info
+  examples: |
+    - Tell me about tourist destinations.
+    - I'm looking for travel information.
+    - What are some popular tourist spots?
+    - I want to know about attractions.
+    - Suggest some places to visit.
+    - I need some travel advice.
+    - I'm planning a trip.
+    - I want to go on vacation.
+    - Can you give me some travel tips?
+    - I'm interested in tourism.
+    - What can you tell me about travel?
+    - I'd like some information on travel.
+    - What are some good travel destinations?
+    - Give me some travel recommendations.
+
+- intent: tourism_by_category
+  examples: |
+    - what are some nature destinations?
+    - what places to visit for [adventure](category)
+    - show me [beach](category) destinations
+    - [historical](category) places to visit
+    - [urban](category) destinations
+    - places to visit for [nature](category) tourism
+    - what are the [adventure](category) places in [india](country)
+    - places to visit in [india](country) for [adventure](category)
+    - places for [adventure](category) in [india](country)
+    - adventure places in [india](country)
+    - tell me about nature spots
+    - tell me about adventure spots
+    - any recommendations for nature attractions?
+    - where can i find nature places?
+    - I'm looking for nature destinations
+    - nature tourism
+    - nature places
+    - nature sites
+    - natural attractions
+    - places of natural beauty
+    - what are some natural wonders?
+    - i want to visit nature places
+    - suggest nature destinations
+    - what are the top rated places to visit in India?
+    - nature spots to visit
+    - best nature destinations
+    - top nature destinations
+    - nature places in [India](country)
+    - I want to go to a natural place
+    - Show me some nature spots
+    - What natural places are there to visit?
+    - Where can I find natural wonders?
+    - I'm interested in nature-based tourism
+    - Any recommendations for nature lovers?
+    - What are some good nature getaways?
+    - I'd like to explore nature
+    - Recommend some nature trails
+    - nature adventures
+    - nature parks
+    - wildlife destinations
+    - List some nature destinations.
+    - Give me some options for nature tourism.
+    - I'm interested in seeing natural landscapes.
+    - What are the most popular nature attractions?
+    - I'd like to visit a place with natural beauty.
+    - Where can I experience nature?
+    - Show me some nature-related activities.
+    - What are some scenic nature spots?
+    - I want to explore the natural world.
+    - Recommend some nature reserves.
+    - I'm looking for eco-tourism destinations.
+    - nature viewing
+    - nature trails
+    - nature escapes
+    - natural heritage sites
+    - natural wonders of the world
+    - nature and wildlife
+    - nature photography spots
+    - nature walks
+    - nature hikes
+    - nature tours
+    - natural parks
+    - wildlife sanctuaries
+    - bird watching spots
+    - botanical gardens
+    - national parks
+    - nature conservation areas
+    - nature preserves
+    - scenic landscapes
+    - natural beauty spots
+    - natural landmarks
+    - geological formations
+    - natural phenomena
+    - nature experiences
+    - nature excursions
+    - nature expeditions
+    - nature safaris
+    - nature cruises
+    - nature camping
+    - nature retreats
+    - nature getaways near me
+    - nature attractions near me
+    - nature places to visit near me
+    - best nature spots near me
+    - top nature spots near me
+    - nature places in [Brazil](country)
+    - nature places in [USA](country)
+    - nature places in [France](country)
+    - nature places in [Australia](country)
+    - nature in [Italy](country)
+    - natural wonders of [Germany](country)
+    - nature spots of [Japan](country)
+    - natural beauty in [Canada](country)
+    - nature in [Spain](country)
+    - nature in [Mexico](country)
+    - nature in [Egypt](country)
+    - nature in [China](country)
+    - nature in [Africa](country)
+    - nature in [Southeast Asia](country)
+    - I want to see [mountains](category)
+    - I want to visit [beaches](category)
+    - I want to see [deserts](category)
+    - I want to see [forests](category)
+    - I want to see [lakes](category)
+    - I want to see [rivers](category)
+
+- intent: tourism_by_country
+  examples: |
+    - What are some places to visit in [India](country)?
+    - I want to travel to [USA](country). What are the attractions?
+    - What are some tourist spots in [Brazil](country)?
+    - Any recommendations for visiting [France](country)?
+    - I want to visit [Egypt](country).
+    - Tell me about tourism in [China](country).
+    - What are some tourist spots in [Australia](country)?
+    - places to visit in [country]
+    - tourist attractions in [country]
+    - travel destinations in [country]
+    - things to see in [country]
+    - best places to visit in [country]
+    - top attractions in [country]
+    - I'd like to travel to [country]
+    - I want to explore [country]
+    - recommend places in [country]
+    - suggest places to see in [country]
+    - what to do in [country]
+    - places of interest in [country]
+    - tourist spots in [country]
+    - travel tips for [country]
+    - vacation spots in [country]
+    - holiday destinations in [country]
+    - sightseeing in [country]
+    - tourist information for [country]
+    - where to go in [country]
+    - destinations in [country]
+    - must-see places in [country]
+    - famous landmarks in [country]
+    - popular tourist spots in [country]
+    - best tourist attractions in [country]
+    - top tourist destinations in [country]
+    - I'm planning a trip to [country]
+    - I'm thinking of visiting [country]
+    - I'm looking for travel ideas for [country]
+    - I need some travel inspiration for [country]
+    - I'm interested in [country]'s culture
+    - I want to experience [country]'s history
+    - I'd like to learn about [country]
+    - I'm curious about [country]'s traditions
+    - I'm fascinated by [country]'s architecture
+    - I'm drawn to [country]'s natural beauty
+    - I'm intrigued by [country]'s cuisine
+    - I'm excited to explore [country]'s cities
+    - I'm eager to discover [country]'s hidden gems
+    - I'm keen to experience [country]'s nightlife
+    - I'm looking for adventure in [country]
+    - I want to relax in [country]
+    - I'm seeking cultural immersion in [country]
+    - I'm interested in historical sites in [country]
+    - I'm looking for beach vacations in [country]
+    - I want to go on a safari in [country]
+    - I'm planning a romantic getaway in [country]
+    - I'm looking for family-friendly activities in [country]
+    - I want to experience [country]'s wildlife
+    - I'm interested in [country]'s art
+    - I'm looking for museums in [country]
+    - I want to attend festivals in [country]
+    - I'm interested in [country]'s music
+    - I'm looking for live music venues in [country]
+    - I want to experience [country]'s local markets
+    - I'm interested in [country]'s food
+    - I'm looking for restaurants in [country]
+    - I want to try [country]'s traditional dishes
+    - I'm interested in [country]'s drinks
+    - I'm looking for bars in [country]
+    - I want to experience [country]'s nightlife
+    - I'm looking for adventure in [country]
+    - I want to relax in [country]
+    - I'm seeking cultural immersion in [country]
+    - I'm interested in historical sites in [country]
+    - I'm looking for beach vacations in [country]
+    - I want to go on a safari in [country]
+    - I'm planning a romantic getaway in [country]
+    - I'm looking for family-friendly activities in [country]
+    - I want to experience [country]'s wildlife
+    - I'm interested in [country]'s art
+    - I'm looking for museums in [country]
+    - I want to attend festivals in [country]
+    - I'm interested in [country]'s music
+    - I'm looking for live music venues in [country]
+    - I want to experience [country]'s local markets
+    - I'm interested in [country]'s food
+    - I'm looking for restaurants in [country]
+    - What are some popular tourist attractions in [Japan](country)?
+    - What are the best places to visit in [Italy](country)?
+    - I'm planning a trip to [Spain](country) and need some recommendations.
+    - I'd like to explore the historical sites of [Greece](country).
+    - I'm interested in the culture and traditions of [Mexico](country).
+    - What are some must-see landmarks in [Germany](country)?
+    - I'm looking for adventure activities in [Switzerland](country).
+    - I want to relax on the beaches of [Portugal](country).
+    - I'm planning a family vacation to [France](country).
+    - What are some good places for hiking in [Canada](country)?
+    - I'd like to experience the wildlife in [Africa](country).
+    - I'm interested in the art scene in [Brazil](country).
+    - What are some famous museums in [United Kingdom](country)?
+    - I want to attend a traditional festival in [India](country).
+
+- intent: top_rated_places_in_india # For top-rated places specifically in India (from dictionary)
+  examples: |
+    - what are the top rated places to visit in India
+    - top rated places in India
+    - best rated places in India
+
+- intent: tourism_by_rating
+  examples: |
+    - Show me highly rated tourist spots.
+    - What are the top-rated attractions?
+    - I want to visit places with a good rating.
+    - Show me places rated above 4.
+    - What are some poorly rated places?
+    - recommend some top rated places
+    - suggest highly rated locations
+    - best rated tourist spots
+    - top rated tourist attractions
+    - places with excellent reviews
+    - show me places with 5 star ratings
+    - I want to see the best rated places
+    - recommend some highly recommended places
+    - suggest some top-notch locations
+    - give me some top picks
+    - show me some highly acclaimed places
+    - recommend some highly praised places
+    - suggest some highly regarded places
+    - give me some highly esteemed places
+    - show me some highly valued places
+    - recommend some highly rated destinations
+    - suggest some highly recommended destinations
+    - give me some highly acclaimed destinations
+    - show me some highly praised destinations
+    - recommend some highly regarded destinations
+    - suggest some highly esteemed destinations
+    - give me some highly valued destinations
+    - show me some highly rated tourist spots in [India](country)
+    - recommend some top rated places in [Brazil](country)
+    - suggest highly rated locations in [France](country)
+    - best rated tourist spots in [Japan](country)
+    - top rated tourist attractions in [Italy](country)
+    - places with excellent reviews in [Spain](country)
+    - show me places with 5 star ratings in [Mexico](country)
+    - I want to see the best rated places in [Germany](country)
+    - recommend some highly recommended places in [Switzerland](country)
+    - suggest some top-notch locations in [Portugal](country)
+    - give me some top picks in [Canada](country)
+    - show me some highly acclaimed places in [United Kingdom](country)
+    - recommend some highly praised places in [USA](country)
+    - suggest some highly regarded places in [Australia](country)
+    - give me some highly esteemed places in [Egypt](country)
+    - show me some highly valued places in [China](country)
+    - recommend some highly rated destinations in [Africa](country)
+    - suggest some highly recommended destinations in [Southeast Asia](country)
+    - give me some highly acclaimed destinations in [Argentina](country)
+    - show me some highly praised destinations in [Russia](country)
+    - recommend some highly regarded destinations in [South Korea](country)
+    - suggest some highly esteemed destinations in [Netherlands](country)
+    - give me some highly valued destinations in [Sweden](country)
+    - show me some highly rated tourist spots near me
+    - recommend some top rated places nearby
+    - suggest highly rated locations close by
+    - best rated tourist spots in my area
+    - top rated tourist attractions near me
+    - places with excellent reviews around me
+    - show me places with 5 star ratings nearby
+    - I want to see the best rated places in my city
+    - recommend some highly recommended places in my town
+    - suggest some top-notch locations in my region
+    - give me some top picks close to me
+    - show me some highly acclaimed places in my vicinity
+    - recommend some highly praised places in my neighborhood
+    - suggest some highly regarded places in my community
+    - give me some highly esteemed places in my area
+    - show me some highly valued places nearby
+    - show me places with the best reviews
+    - recommend the highest rated places
+    - suggest the best reviewed locations
+    - give me the top rated picks
+    - show me the most acclaimed places
+    - recommend the most praised places
+    - suggest the most regarded places
+    - give me the most esteemed places
+    - show me the most valued places
+    - what are the top rated places
+    - what are the best rated places
+    - what are the highest rated places
+    - what are the most recommended places
+    - what are the most suggested places
+    - what are the most praised places
+    - what are the most regarded places
+    - what are the most esteemed places
+    - what are the most valued places
+    - what are the top rated places to visit
+    - what are the best rated places to go
+    - what are the highest rated places to see
+    - what are the most recommended places to visit
+    - what are the most suggested places to go
+    - what are the most praised places to see
+    - what are the most regarded places to visit
+    - what are the most esteemed places to go
+    - what are the most valued places to see
+    - what are the top rated tourist spots
+    - what are the best rated tourist attractions
+    - what are the highest rated tourist destinations
+    - what are the most recommended tourist spots
+    - what are the most suggested tourist attractions
+    - what are the most praised tourist destinations
+    - what are the most regarded tourist spots
+    - what are the most esteemed tourist attractions
+    - what are the most valued tourist destinations
+    - what are the top rated places in [India](country)
+    - what are the best rated places in [Brazil](country)
+    - what are the highest rated places in [France](country)
+    - what are the most recommended places in [Japan](country)
+    - what are the most suggested places in [Italy](country)
+    - what are the most praised places in [Spain](country)
+    - what are the most regarded places in [Mexico](country)
+    - what are the most esteemed places in [Germany](country)
+    - what are the most valued places in [Switzerland](country)
+    - what are the top rated places near me
+    - what are the best rated places nearby
+    - what are the highest rated places close by
+    - what are the most recommended places in my area
+    - what are the most suggested places in my town
+    - what are the most praised places in my region
+    - what are the most regarded places in my vicinity
+    - what are the most esteemed places in my neighborhood
+    - what are the most valued places in my community
+    - show me the top rated places
+    - give me the best rated places
+    - find the highest rated places
+    - locate the most recommended places
+    - point out the most suggested places
+    - highlight the most praised places
+    - identify the most regarded places
+    - pinpoint the most esteemed places
+    - show me the most valued places
+    - where are the top rated places
+    - where are the best rated places located
+    - where can i find the highest rated places
+    - where are the most recommended places situated
+    - where are the most suggested places located
+    - where can i see the most praised places
+    - where are the most regarded places situated
+    - where can i visit the most esteemed places
+    - where are the most valued places located
+    - what are the top rated tourist
+    # nlu.yml (continued)
+    - what are the top rated tourist attractions
+    - what are the best rated tourist spots
+    - what are the highest rated tourist destinations
+    - what are the most recommended tourist attractions
+    - what are the most suggested tourist spots
+    - what are the most praised tourist destinations
+    - what are the most regarded tourist attractions
+    - what are the most esteemed tourist spots
+    - what are the most valued tourist destinations
+    - what are the top rated places to visit in [India](country)
+    - what are the best rated places to go in [Brazil](country)
+    - what are the highest rated places to see in [France](country)
+    - what are the most recommended places to visit in [Japan](country)
+    - what are the most suggested places to go in [Italy](country)
+    - what are the most praised places to see in [Spain](country)
+    - what are the most regarded places to visit in [Mexico](country)
+    - what are the most esteemed places to go in [Germany](country)
+    - what are the most valued places to see in [Switzerland](country)
+    - what are the top rated places near me
+    - what are the best rated places nearby
+    - what are the highest rated places close by
+    - what are the most recommended places in my area
+    - what are the most suggested places in my town
+    - what are the most praised places in my region
+    - what are the most regarded places in my vicinity
+    - what are the most esteemed places in my neighborhood
+    - what are the most valued places in my community
+    - show me the top rated places
+    - give me the best rated places
+    - find the highest rated places
+    - locate the most recommended places
+    - point out the most suggested places
+    - highlight the most praised places
+    - identify the most regarded places
+    - pinpoint the most esteemed places
+    - show me the most valued places
+    - where are the top rated places
+    - where are the best rated places located
+    - where can i find the highest rated places
+    - where are the most recommended places situated
+    - where are the most suggested places located
+    - where can i see the most praised places
+    - where are the most regarded places situated
+    - where can i visit the most esteemed places
+    - where are the most valued places located
+    - what are the top rated tourist spots
+    - what are the best rated tourist attractions
+    - what are the highest rated tourist destinations
+    - what are the most recommended tourist spots
+    - what are the most suggested tourist attractions
+    - what are the most praised tourist destinations
+    - what are the most regarded tourist spots
+    - what are the most esteemed tourist attractions
+    - what are the most valued tourist destinations
+    - what are the top rated places to visit in [India](country)
+    - what are the best rated places to go in [Brazil](country)
+    - what are the highest rated places to see in [France](country)
+    - what are the most recommended places to visit in [Japan](country)
+    - what are the most suggested places to go in [Italy](country)
+    - what are the most praised places to see in [Spain](country)
+    - what are the most regarded places to visit in [Mexico](country)
+    - what are the most esteemed places to go in [Germany](country)
+    - what are the most valued places to see in [Switzerland](country)
+    - what are the top rated places near me
+    - what are the best rated places nearby
+    - what are the highest rated places close by
+    - what are the most recommended places in my area
+    - what are the most suggested places in my town
+    - what are the most praised places in my region
+    - what are the most regarded places in my vicinity
+    - what are the most esteemed places in my neighborhood
+    - what are the most valued places in my community
+    - show me the top rated places
+    - give me the best rated places
+    - find the highest rated places
+    - locate the most recommended places
+    - point out the most suggested places
+    - highlight the most praised places
+    - identify the most regarded places
+    - pinpoint the most esteemed places
+    - show me the most valued places
+    - where are the top rated places
+    - where are the best rated places located
+    - where can i find the highest rated places
+    - where are the most recommended places situated
+    - where are the most suggested places located
+    - where can i see the most praised places
+    - where are the most regarded places situated
+    - where can i visit the most esteemed places
+    - where are the most valued places located
+    - what are the top rated tourist spots
+    - what are the best rated tourist attractions
+    - what are the highest rated tourist destinations
+    - what are the most recommended tourist spots
+    - what are the most suggested tourist attractions
+    - what are the most praised tourist destinations
+    - what are the most regarded tourist spots
+    - what are the most esteemed tourist attractions
+    - what are the most valued tourist destinations
+    - what are the top rated places to visit in [India](country)
+    - what are the best rated places to go in [Brazil](country)
+    - what are the highest rated places to see in [France](country)
+    - what are the most recommended places to visit in [Japan](country)
+    - what are the most suggested places to go in [Italy](country)
+    - what are the most praised places to see in [Spain](country)
+    - what are the most regarded places to visit in [Mexico](country)
+    - what are the most esteemed places to go in [Germany](country)
+    - what are the most valued places to see in [Switzerland](country)
+    - what are the top rated places near me
+    - what are the best rated places nearby
+    - what are the highest rated places close by
+    - what are the most recommended places in my area
+    - what are the most suggested places in my town
+    - what are the most praised places in my region
+    - what are the most regarded places in my vicinity
+    - what are the most esteemed places in my neighborhood
+    - what are the most valued places in my community
+    - show me the top rated places
+    - give me the best rated places
+    - find the highest rated places
+    - locate the most recommended places
+    - point out the most suggested places
+    - highlight the most praised places
+    - identify the most regarded places
+    - pinpoint the most esteemed places
+    - show me the most valued places
+    - where are the top rated places
+    - where are the best rated places located
+    - where can i find the highest rated places
+    - where are the most recommended places situated
+    - where are the most suggested places located
+    - where can i see the most praised places
+    - where are the most regarded places situated
+    - where can i visit the most esteemed places
+    - where are the most valued places located
+    - what are the top rated tourist spots
+    - what are the best rated tourist attractions
+    - what are the highest rated tourist destinations
+    - what are the most recommended tourist spots
+    - what are the most suggested tourist attractions
+    - what are the most praised tourist destinations
+    - what are the most regarded tourist spots
+    - what are the most esteemed tourist attractions
+    - what are the most valued tourist destinations
+    - what are the top rated places to visit in [India](country)
+    - what are the best rated places to go in [Brazil](country)
+    - what are the highest rated places to see in [France](country)
+    - what are the most recommended places to visit in [Japan](country)
+    - what are the most suggested places to go in [Italy](country)
+    - what are the most praised places to see in [Spain](country)
+    - what are the most regarded places to visit in [Mexico](country)
+    - what are the most esteemed places to go in [Germany](country)
+    - what are the most valued places to see in [Switzerland](country)
+    - what are the top rated places near me
+    - what are the best rated places nearby
+    - what are the highest rated places close by
+    - what are the most recommended places in my area
+    - what are the most suggested places in my town
+    - what are the most praised places in my region
+    - what are the most regarded places in my vicinity
+    - what are the most esteemed places in my neighborhood
+    - what are the most valued places in my community
+    - show me the top rated places
+    - give me the best rated places
+    - find the highest rated places
+    - locate the most recommended places
+    - point out the most suggested places
+    - highlight the most praised places
+    - identify the most regarded places
+    - pinpoint the most esteemed places
+    - show me the most valued places
+    - where are the top rated places
+    - where are the best rated places located
+    - where can i find the highest rated places
+    - where are the most recommended places situated
+    - where are the most suggested places located
+    - where can i see the most praised places
+    - where are the most regarded places situated
+
+- intent: tourism_by_accommodation
+  examples: |
+    - Are there accommodations available at this destination?
+    - Do they have lodging options?
+    - Is there a place to stay there?
+    - Are there hotels nearby?
+    - Can I find accommodation there?
+    - What are the accommodation options?
+    - Where can I stay?
+    - Are there any hotels?
+    - Are there any hostels?
+    - Are there any resorts?
+    - Are there any motels?
+    - Are there any guesthouses?
+    - Are there any bed and breakfasts?
+    - Are there any vacation rentals?
+    - Are there any campsites?
+    - Are there any cabins?
+    - Are there any lodges?
+    - Are there any inns?
+    - What types of accommodation are available?
+    - What are the lodging options like?
+    - What kind of places are there to stay?
+    - What are the nearby hotels like?
+    - What are the local hotels like?
+    - What are the accommodations in [India](country) like?
+    - What are the hotels in [Brazil](country) like?
+    - What are the resorts in [France](country) like?
+    - What are the hostels in [Japan](country) like?
+    - What are the motels in [Italy](country) like?
+    - What are the guesthouses in [Spain](country) like?
+    - What are the bed and breakfasts in [Mexico](country) like?
+    - What are the vacation rentals in [Germany](country) like?
+    - What are the campsites in [Switzerland](country) like?
+    - What are the cabins in [Portugal](country) like?
+    - What are the lodges in [Canada](country) like?
+    - What are the inns in [United Kingdom](country) like?
+    - Are there any accommodations in [USA](country)?
+    - Are there any hotels in [Australia](country)?
+    - Are there any hostels in [Egypt](country)?
+    - Are there any resorts in [China](country)?
+    - Are there any motels in [Africa](country)?
+    - Are there any guesthouses in [Southeast Asia](country)?
+    - Are there any bed and breakfasts in [Argentina](country)?
+    - Are there any vacation rentals in [Russia](country)?
+    - Are there any campsites in [South Korea](country)?
+    - Are there any cabins in [Netherlands](country)?
+    - Are there any lodges in [Sweden](country)?
+    - Are there any inns near me?
+    - Are there any hotels nearby?
+    - Are there any hostels close by?
+    - Are there any resorts in my area?
+    - Are there any motels in my town?
+    - Are there any guesthouses in my region?
+    - Are there any bed and breakfasts in my vicinity?
+    - Are there any vacation rentals in my neighborhood?
+    - Are there any campsites in my community?
+    - Are there any cabins close to me?
+    - Are there any lodges near my location?
+    - Are there any inns in my city?
+    - Are there any places to stay near me?
+    - Where can I find accommodation nearby?
+    - What are the closest places to stay?
+    - Are there any places to stay in [city name]?
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you an ai?
+    - are you artificial intelligence?
+    - who are you?
+    - what are you?
+    - what is your purpose?
+    - what can you do?
